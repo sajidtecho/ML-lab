@@ -13,6 +13,9 @@ This repository contains the practical experiments, code implementations, Jupyte
 ```text
 ML-lab/
 ├── Lab1.ipynb              # Lab 1: Environment Setup & Introduction
+├── exp-2/
+│   ├── exp-2.ipynb         # Lab 2: State-of-the-Art ML Tools & Frameworks Review Notebook
+│   └── sota_ml_tools_review.py # Executable Python diagnostic & benchmark script
 ├── ep-3/
 │   └── lab-3.ipynb         # Lab 3: Exploratory Data Analysis (EDA) on Iris Dataset
 ├── exp-4/
@@ -35,10 +38,30 @@ ML-lab/
 | Experiment | Title | Dataset / Tool | Description & Key Focus |
 | :--- | :--- | :--- | :--- |
 | **Lab 1** | Machine Learning Setup | Python / Jupyter | Environment verification, library imports, and baseline sanity checks. |
+| **Lab 2** | SOTA ML Tools Review | SOTA ML Ecosystem | Review & benchmarking of modern tools across data processing, gradient boosting (XGBoost/LightGBM), PyTorch, & MLOps tracking. |
 | **Lab 3** | Exploratory Data Analysis | Iris Dataset | Data cleaning, statistical summary, pairplots, boxplots, and feature distribution analysis. |
 | **Lab 4** | Simple Linear Regression | California Housing Dataset | Predicting house values using single feature OLS regression (`MedInc`), residual diagnostics, and evaluation. |
 | **Lab 5** | Binary Logistic Regression | Breast Cancer Wisconsin | Implementation of Binary Logistic Regression from Scratch (Gradient Descent) for cancer identification & threshold tuning. |
 | **Lab 8** | Regularized Linear Regression | California Housing & Breast Cancer Wisconsin | Implementation & comparative evaluation of Ridge ($L_2$) and Lasso ($L_1$) regularized regression vs Standard Linear Regression (OLS). |
+
+---
+
+## 🔬 Lab 2 Detail: State-of-the-Art ML Tools Review & Benchmark
+
+### **Objective**
+Conduct a comprehensive review and empirical benchmark of modern state-of-the-art tools and frameworks across the ML project lifecycle (Data Engineering, EDA, Gradient Boosting, Deep Learning, Interpretability, and MLOps).
+
+### **Tool Taxonomy & Stack**
+1. **Data Processing**: `NumPy` (Vectorized arrays), `Pandas` (DataFrames), `Polars` (Rust engine)
+2. **Visualization**: `Matplotlib`, `Seaborn`, `Plotly`
+3. **Machine Learning / GBDT**: `Scikit-Learn`, `XGBoost`, `LightGBM`, `CatBoost`
+4. **Deep Learning**: `PyTorch`, `TensorFlow` / `Keras`
+5. **MLOps & Tracking**: `MLflow`, `Weights & Biases (W&B)`
+
+### **Key Empirical Benchmark Findings**
+- **Data Processing Speedup**: `NumPy` vectorized operations execute **`1.40x faster`** than `Pandas` series on 1,000,000 array calculations (`28.87 ms` vs `40.55 ms`).
+- **GBDT Training Speed**: **`XGBoost`** achieved the fastest training runtime (**`197.19 ms`** vs `511.59 ms` for Random Forest).
+- **GBDT Accuracy**: **`LightGBM`** delivered peak classification accuracy (**`96.49%`**).
 
 ---
 
