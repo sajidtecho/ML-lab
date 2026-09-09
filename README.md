@@ -17,6 +17,9 @@ ML-lab/
 │   └── lab-3.ipynb         # Lab 3: Exploratory Data Analysis (EDA) on Iris Dataset
 ├── exp-4/
 │   └── lab-4.ipynb         # Lab 4: Simple Linear Regression on California Housing Dataset
+├── exp-5/
+│   ├── exp-5.ipynb         # Lab 5: Binary Logistic Regression Notebook (Cancer Identification)
+│   └── binary_logistic_regression.py # Executable Python benchmark script
 ├── exp-8/
 │   ├── exp-8.ipynb         # Lab 8: Ridge & Lasso Regularized Linear Regression Notebook
 │   └── regularized_regression.py # Executable Python benchmark script
@@ -34,6 +37,7 @@ ML-lab/
 | **Lab 1** | Machine Learning Setup | Python / Jupyter | Environment verification, library imports, and baseline sanity checks. |
 | **Lab 3** | Exploratory Data Analysis | Iris Dataset | Data cleaning, statistical summary, pairplots, boxplots, and feature distribution analysis. |
 | **Lab 4** | Simple Linear Regression | California Housing Dataset | Predicting house values using single feature OLS regression (`MedInc`), residual diagnostics, and evaluation. |
+| **Lab 5** | Binary Logistic Regression | Breast Cancer Wisconsin | Implementation of Binary Logistic Regression from Scratch (Gradient Descent) for cancer identification & threshold tuning. |
 | **Lab 8** | Regularized Linear Regression | California Housing & Breast Cancer Wisconsin | Implementation & comparative evaluation of Ridge ($L_2$) and Lasso ($L_1$) regularized regression vs Standard Linear Regression (OLS). |
 
 ---
@@ -54,6 +58,26 @@ Parameters estimated via **Ordinary Least Squares (OLS)**:
 - **Mean Absolute Error (MAE)**: `0.5332` (~$\$53,320$)
 - **Root Mean Squared Error (RMSE)**: `0.8421` (~$\$84,210$)
 - **$R^2$ Score (Test Set)**: `0.4735` (Explains **47.35%** of variance using single feature `MedInc`)
+
+---
+
+## 🔬 Lab 5 Detail: Binary Logistic Regression (Cancer Identification)
+
+### **Objective**
+Implement **Binary Logistic Regression** from scratch using **Gradient Descent** on vectorised NumPy operations to diagnose cancer (Malignant vs. Benign) on the **Breast Cancer Wisconsin Dataset**.
+
+### **Mathematical Formulation**
+- **Sigmoid Activation**: $\sigma(z) = \frac{1}{1 + e^{-z}}$
+- **Probability Hypothesis**: $h_{\mathbf{w}, b}(\mathbf{x}) = \sigma(\mathbf{w}^T \mathbf{x} + b) = P(y=1 \mid \mathbf{x})$
+- **Binary Cross-Entropy Loss (Log Loss)**:
+  $$\mathcal{L}(\mathbf{w}, b) = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right]$$
+- **Gradient Updates**: $\mathbf{w} \leftarrow \mathbf{w} - \eta \frac{1}{n} \mathbf{X}^T (\mathbf{p} - \mathbf{y}), \quad b \leftarrow b - \eta \frac{1}{n} \sum (p_i - y_i)$
+
+### **Performance Metrics (Scratch Model vs. Benchmark)**
+- **Training Convergence**: Loss drops from `0.69315` to `0.05164` over 2,000 iterations.
+- **Accuracy**: **`96.49%`** at standard $0.5$ threshold; **`98.25%`** at clinical threshold $0.2$.
+- **Sensitivity (Recall for Malignant cases)**: **`100.0%` (0 False Negatives)** at threshold $\le 0.3$.
+- **ROC-AUC**: **`0.9960`**.
 
 ---
 

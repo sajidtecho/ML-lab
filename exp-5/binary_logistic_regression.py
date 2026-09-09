@@ -20,7 +20,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
     roc_auc_score, log_loss, confusion_matrix, roc_curve,
-    precision_recall_curve, ClassificationReportVisualizer if False else None
+    precision_recall_curve
 )
 
 # Seed for reproducibility
