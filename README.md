@@ -26,6 +26,9 @@ ML-lab/
 ├── exp-8/
 │   ├── exp-8.ipynb         # Lab 8: Ridge & Lasso Regularized Linear Regression Notebook
 │   └── regularized_regression.py # Executable Python benchmark script
+├── exp-9/
+│   ├── exp-9.ipynb         # Lab 9: Regularized Logistic Regression Notebook
+│   └── regularized_logistic_regression.py # Executable Python benchmark script
 ├── verify_ml_env.py        # Automated environment & library verification script
 ├── .gitignore              # Git ignore rules for virtual environments & caches
 └── README.md               # Repository documentation
@@ -43,6 +46,7 @@ ML-lab/
 | **Lab 4** | Simple Linear Regression | California Housing Dataset | Predicting house values using single feature OLS regression (`MedInc`), residual diagnostics, and evaluation. |
 | **Lab 5** | Binary Logistic Regression | Breast Cancer Wisconsin | Implementation of Binary Logistic Regression from Scratch (Gradient Descent) for cancer identification & threshold tuning. |
 | **Lab 8** | Regularized Linear Regression | California Housing & Breast Cancer Wisconsin | Implementation & comparative evaluation of Ridge ($L_2$) and Lasso ($L_1$) regularized regression vs Standard Linear Regression (OLS). |
+| **Lab 9** | Regularized Logistic Regression | California Housing & Breast Cancer Wisconsin | Implementation & comparative evaluation of Ridge ($L_2$) and Lasso ($L_1$) regularized Logistic Regression vs Unregularized & ElasticNet baselines. |
 
 ---
 
